@@ -2,6 +2,7 @@ import type { Request, Response, NextFunction } from 'express';
 import jwt from 'jsonwebtoken';
 import { validationResult } from 'express-validator';
 import User from '../models/User.js';
+import mongoose from 'mongoose'; 
 import bcrypt from 'bcryptjs';
 
 const sign = (user: { _id: string; role: string }) =>
